@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- fontaweswome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body style="margin: 0px; padding: 0px;">
+    <div class="container-fluid vh-100 d-flex justify-content-center align-items-center"
+        style="background: linear-gradient(to right,#0f6e87, #11998e);">
+        <div style="width: 35%;min-height: 350px;  background-color: rgba(0, 0, 0, 0.5); border-radius: 15px;">
+            <div class="d-flex justify-content-center my-5 fs-1">
+                <i class="fa-solid fa-user text-white"></i>
+            </div>
+            <h3 class="text-white ms-4">Welcome to Personal To-do</h3>
+            <h5 class="ms-4" style="color: #1a88a3;">Login to your account</h5>
+            <div class="mb-3 ms-4 mx-4 my-4">
+                <label for="userName" class="form-label text-white">Username</label>
+                <input type="email" class="form-control" id="userName" placeholder="Name">
+            </div>
+            <div>
+                <div class="d-grid gap-2">
+                    <button onclick="login()" class="btn btn-primary ms-4 mx-4 my-4" type="button">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function login() {
+        const user = userName.value;
+        localStorage.setItem("user", user)
+        window.location = "todo.html"
+    }
+</script>
+
+</html>
